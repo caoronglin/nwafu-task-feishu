@@ -1,11 +1,20 @@
 #!/usr/bin/env python3
 """
-西北农林科技大学课表导入飞书待办技能
+NWSUAF Task Feishu - 西北农林科技大学课表导入飞书待办工具
+
 支持校历作息时间（夏令时/冬令时自动切换）、课程表解析、飞书任务创建
 
 Author: 薛麟麒
+Email: xuelinqi@nwsuaf.edu.cn
 Version: 1.0.0
+License: MIT
+GitHub: https://github.com/caoronglin/nwafu-task-feishu
 """
+
+__version__ = "1.0.0"
+__author__ = "薛麟麒"
+__email__ = "xuelinqi@nwsuaf.edu.cn"
+__license__ = "MIT"
 
 import os
 import sys

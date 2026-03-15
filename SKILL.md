@@ -2,8 +2,10 @@
 name: nwafu-task-feishu
 description: 西北农林科技大学课表导入飞书待办技能。支持校历作息时间（夏令时/冬令时自动切换）、课程表解析、飞书任务创建、分组管理等功能。
 version: 1.0.0
-author: 薛麟麒
+author: 薛麟麒 <xuelinqi@nwsuaf.edu.cn>
 tags: 西北农林科技大学，课表，飞书，待办，任务管理，校历，作息时间
+repository: https://github.com/caoronglin/nwafu-task-feishu
+license: MIT
 ---
 
 ## 📚 技能描述
@@ -103,13 +105,24 @@ python nwafu_task_feishu.py \
 
 ```
 nwafu-task-feishu/
-├── SKILL.md                 # 技能描述
-├── README.md                # 使用说明
-├── nwafu_task_feishu.py     # 主脚本
+├── nwafu_task_feishu.py     # 主程序脚本
+├── pyproject.toml           # Python 项目配置
 ├── requirements.txt         # Python 依赖
 ├── .env.example             # 环境变量模板
-├── .gitignore              # Git 忽略文件
-└── cache-YYYY-MM-DD/       # 缓存目录（不上传）
+├── .gitignore              # Git 忽略配置
+├── .editorconfig           # 编辑器配置
+├── LICENSE                 # MIT 许可证
+├── README.md               # 项目说明
+├── CHANGELOG.md            # 更新日志
+├── CONTRIBUTING.md         # 贡献指南
+├── CODE_OF_CONDUCT.md      # 行为准则
+├── SECURITY.md             # 安全政策
+├── SKILL.md                # CoPaw 技能描述
+├── tests/                  # 测试目录
+│   ├── __init__.py
+│   └── test_schedule.py
+└── .github/workflows/      # GitHub Actions
+    └── ci.yml
 ```
 
 ## 🔐 密钥管理
@@ -188,8 +201,14 @@ python nwafu_task_feishu.py \
 
 ## 📄 License
 
-MIT License
+MIT License - 详见 [LICENSE](LICENSE) 文件
 
 ## 🤝 贡献
 
-欢迎提交 Issue 和 Pull Request！
+欢迎提交 Issue 和 Pull Request！详见 [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## 🔗 链接
+
+- GitHub: https://github.com/caoronglin/nwafu-task-feishu
+- Issues: https://github.com/caoronglin/nwafu-task-feishu/issues
+- PyPI: （待发布）

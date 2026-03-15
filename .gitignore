@@ -2,6 +2,8 @@
 .env
 *.env
 .secrets/
+*.pem
+*.key
 
 # Python
 __pycache__/
@@ -9,21 +11,84 @@ __pycache__/
 *$py.class
 *.so
 .Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 虚拟环境
 venv/
 env/
 ENV/
-
-# 缓存和临时文件
-cache-*/
-*.cache
-*.log
-
-# 系统文件
-.DS_Store
-Thumbs.db
+.venv
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# 测试
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# 缓存和临时文件
+cache-*/
+*.cache
+*.log
+tmp/
+temp/
+.tmp/
+
+# 数据文件
+*.xls
+*.xlsx
+*.csv
+!*.example
+
+# 系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 文档生成
+docs/_build/
+site/
+
+# 覆盖率报告
+coverage.xml
+*.cover
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre 类型检查
+.pyre/

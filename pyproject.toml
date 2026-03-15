@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nwafu-task-feishu"
+version = "1.0.0"
+description = "西北农林科技大学课表导入飞书待办工具"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "薛麟麒", email = "xuelinqi@nwsuaf.edu.cn"}
+]
+keywords = [
+    "nwsuaf",
+    "feishu",
+    "task",
+    "schedule",
+    "西北农林科技大学",
+    "课表",
+    "飞书"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Education",
+    "Topic :: Office/Business :: Scheduling",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "xlrd>=2.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=23.0",
+    "flake8>=6.0",
+    "mypy>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/caoronglin/nwafu-task-feishu"
+Repository = "https://github.com/caoronglin/nwafu-task-feishu.git"
+Issues = "https://github.com/caoronglin/nwafu-task-feishu/issues"
+Changelog = "https://github.com/caoronglin/nwafu-task-feishu/blob/main/CHANGELOG.md"
+
+[project.scripts]
+nwafu-task = "nwafu_task_feishu:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+
+[tool.flake8]
+max-line-length = 88
+exclude = [".git", "__pycache__", "build", "dist"]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
